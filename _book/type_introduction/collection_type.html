@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>流程控制 · GitBook</title>
+        <title>集合型別 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="if_else.html" />
+    <link rel="next" href="optional.html" />
     
     
-    <link rel="prev" href="func.html" />
+    <link rel="prev" href="base_type.html" />
     
 
     </head>
@@ -149,9 +149,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../type_introduction/base_type.html">
+        <li class="chapter " data-level="2.3.1" data-path="base_type.html">
             
-                <a href="../type_introduction/base_type.html">
+                <a href="base_type.html">
             
                     
                     基礎型別
@@ -162,9 +162,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="../type_introduction/collection_type.html">
+        <li class="chapter active" data-level="2.3.2" data-path="collection_type.html">
             
-                <a href="../type_introduction/collection_type.html">
+                <a href="collection_type.html">
             
                     
                     集合型別
@@ -175,9 +175,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.3" data-path="../type_introduction/optional.html">
+        <li class="chapter " data-level="2.3.3" data-path="optional.html">
             
-                <a href="../type_introduction/optional.html">
+                <a href="optional.html">
             
                     
                     Optional - 可選型別
@@ -193,9 +193,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="func.html">
+        <li class="chapter " data-level="2.4" data-path="../flow_control/func.html">
             
-                <a href="func.html">
+                <a href="../flow_control/func.html">
             
                     
                     函數 func
@@ -206,9 +206,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="flow_control_introduction.html">
+        <li class="chapter " data-level="2.5" data-path="../flow_control/flow_control_introduction.html">
             
-                <a href="flow_control_introduction.html">
+                <a href="../flow_control/flow_control_introduction.html">
             
                     
                     流程控制
@@ -220,9 +220,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="if_else.html">
+        <li class="chapter " data-level="2.5.1" data-path="../flow_control/if_else.html">
             
-                <a href="if_else.html">
+                <a href="../flow_control/if_else.html">
             
                     
                     條件式控制 if-else
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="for_in.html">
+        <li class="chapter " data-level="2.5.2" data-path="../flow_control/for_in.html">
             
-                <a href="for_in.html">
+                <a href="../flow_control/for_in.html">
             
                     
                     循環式控制 for-in
@@ -281,7 +281,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >流程控制</a>
+        <a href=".." >集合型別</a>
     </h1>
 </div>
 
@@ -296,9 +296,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;">&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h1>
-<p>&#x6559;&#x96FB;&#x8166;&#x5982;&#x4F55;&#x505A;&#x51FA;&#x5224;&#x65B7;&#xFF01;</p>
-
+                                <h1 id="&#x96C6;&#x5408;&#x578B;&#x5225;">&#x96C6;&#x5408;&#x578B;&#x5225;</h1>
+<p>&#x6709;&#x6A5F;&#x6703;&#x518D;&#x88DC;...</p>
+<ol>
+<li>Array</li>
+</ol>
+<pre><code>* Array &#x9663;&#x5217;
+* &#x4E00;&#x500B;`&#x6709;&#x5E8F;`&#x7684;&#x8CC7;&#x6599;&#x96C6;&#x5408;&#xFF0C;&#x5229;&#x7528; Index &#x4F86;&#x53D6;&#x51FA;&#x9663;&#x5217;&#x4E2D;&#x7684;&#x503C;
+* &#x5229;&#x7528; , &#x4F86;&#x5340;&#x5206;&#x6BCF;&#x4E00;&#x7D44;&#x6578;&#x503C;
+* ex: let arr = [0, 1, 2]
+* arr[0]
+* arr[1]
+* note: &#x5B58;&#x653E;&#x7684;&#x5167;&#x5BB9;&#xFF0C;&#x5FC5;&#x9808;&#x660E;&#x78BA;&#x7684;&#x8B93; swift &#x77E5;&#x9053;&#xFF1A;&#x9663;&#x5217;&#x4E2D;&#x5B58;&#x653E;&#x7684;&#x578B;&#x5225;&#x662F;&#x4EC0;&#x9EBC;
+</code></pre><ol>
+<li>Dictionary</li>
+</ol>
+<pre><code>* Dictionary &#x5B57;&#x5178;
+* &#x4E00;&#x7A2E;`&#x7121;&#x5E8F;`&#x7684;&#x8CC7;&#x6599;&#x96C6;&#x5408;&#xFF0C;&#x662F;&#x4E00;&#x7D44; key value
+* &#x7528; : &#x5340;&#x5206; key value&#x311D;&#xFF0C;&#x5DE6;&#x908A;&#x662F; key&#xFF0C;&#x53F3;&#x908A;&#x662F; value
+* &#x4E00;&#x6A23;&#x7528; , &#x4F86;&#x5340;&#x5206;&#x6BCF;&#x4E00;&#x7D44;&#x6578;&#x503C;
+* key &#x5FC5;&#x9808;&#x662F;&#x552F;&#x4E00;
+* &#x7528; key &#x4F86;&#x53D6;&#x503C;
+</code></pre><ol>
+<li>Set</li>
+</ol>
+<pre><code>* &#x4E00;&#x7A2E;`&#x7121;&#x5E8F;`&#x7684;&#x8CC7;&#x6599;&#x96C6;&#x5408;&#xFF0C;&#x8DDF; Array &#x5F88;&#x50CF;&#xFF0C;&#x4F46;&#x5B58;&#x653E;&#x7684;&#x503C;&#x5FC5;&#x9808;&#x662F;&#x552F;&#x4E00;
+</code></pre>
                                 
                                 </section>
                             
@@ -325,12 +348,12 @@
 
             
                 
-                <a href="func.html" class="navigation navigation-prev " aria-label="Previous page: 函數 func">
+                <a href="base_type.html" class="navigation navigation-prev " aria-label="Previous page: 基礎型別">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="if_else.html" class="navigation navigation-next " aria-label="Next page: 條件式控制 if-else">
+                <a href="optional.html" class="navigation navigation-next " aria-label="Next page: Optional - 可選型別">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -341,7 +364,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"流程控制","level":"2.5","depth":1,"next":{"title":"條件式控制 if-else","level":"2.5.1","depth":2,"path":"flow_control/if_else.md","ref":"flow_control/if_else.md","articles":[]},"previous":{"title":"函數 func","level":"2.4","depth":1,"path":"flow_control/func.md","ref":"flow_control/func.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*","description":"transfer to swift developer book!"},"file":{"path":"flow_control/flow_control_introduction.md","mtime":"2019-09-01T10:42:32.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-01T13:54:12.941Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"集合型別","level":"2.3.2","depth":2,"next":{"title":"Optional - 可選型別","level":"2.3.3","depth":2,"path":"type_introduction/optional.md","ref":"type_introduction/optional.md","articles":[]},"previous":{"title":"基礎型別","level":"2.3.1","depth":2,"path":"type_introduction/base_type.md","ref":"type_introduction/base_type.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*","description":"transfer to swift developer book!"},"file":{"path":"type_introduction/collection_type.md","mtime":"2019-09-01T13:48:05.914Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-01T13:54:12.941Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
