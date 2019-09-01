@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../flow_control/if_else.html" />
+    <link rel="next" href="../flow_control/flow_control_introduction.html" />
     
     
     <link rel="prev" href="../" />
@@ -105,7 +105,7 @@
 
     
         
-        <li class="header">型別介紹</li>
+        <li class="header">基礎學習</li>
         
         
     
@@ -122,19 +122,26 @@
             
         </li>
     
+        <li class="chapter " data-level="2.2" data-path="../flow_control/flow_control_introduction.html">
+            
+                <a href="../flow_control/flow_control_introduction.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
 
+            
+            <ul class="articles">
+                
     
-        
-        <li class="header">流程控制</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../flow_control/if_else.html">
+        <li class="chapter " data-level="2.2.1" data-path="../flow_control/if_else.html">
             
                 <a href="../flow_control/if_else.html">
             
                     
-                    條件式 if-else
+                    條件式控制 if-else
             
                 </a>
             
@@ -142,12 +149,30 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../flow_control/for_in.html">
+        <li class="chapter " data-level="2.2.2" data-path="../flow_control/for_in.html">
             
                 <a href="../flow_control/for_in.html">
             
                     
-                    循環式 for-in
+                    循環式控制 for-in
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../flow_control/func.html">
+            
+                <a href="../flow_control/func.html">
+            
+                    
+                    函數 func
             
                 </a>
             
@@ -201,16 +226,58 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="optional---&#x53EF;&#x9078;&#x578B;&#x5225;">Optional - &#x53EF;&#x9078;&#x578B;&#x5225;</h1>
+<ul>
+<li><a href="&#x5BA3;&#x544A;&#x7684;&#x90E8;&#x5206;">&#x5BA3;&#x544A;&#x7684;&#x90E8;&#x5206;</a></li>
+<li><a href="#tag_2">&#x4F7F;&#x7528;&#x7684;&#x90E8;&#x5206;</a></li>
+</ul>
 <p>&#x5728;&#x4E4B;&#x524D;&#x7684;&#x8AB2;&#x7A0B;&#x6709;&#x8AAA;&#x660E;&#x904E;&#xFF0C;&#x6240;&#x8B02;&#x7684;&#x8B8A;&#x6578;&#xFF0C;&#x5176;&#x5BE6;&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x500B;&#x76D2;&#x5B50;&#xFF1B;&#x503C;&#xFF0C;&#x5C31;&#x662F;&#x76D2;&#x5B50;&#x7684;&#x5167;&#x5BB9;&#x7269;&#x3002;</p>
-<p>&#x90A3;&#x65E2;&#x7136;&#x6709;&#x76D2;&#x5B50;&#xFF0C;&#x6709;&#x5167;&#x5BB9;&#x7269;&#xFF0C;&#x5C31;&#x9084;&#x6709;&#x4E00;&#x7A2E;&#x53EF;&#x80FD;&#xFF1A;&#x76D2;&#x5B50;&#x6C92;&#x6709;&#x5167;&#x5BB9;&#x7269;&#xFF01;</p>
-<p>&#x5728;&#x5BA3;&#x544A;&#x7684;&#x90E8;&#x5206; &#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x5728;<code>&#x578B;&#x5225;&#x7684;&#x5F8C;&#x9762;</code>&#x52A0;&#x4E0A; <code>?</code> &#x3002;</p>
+<p>&#x90A3;&#x65E2;&#x7136;&#x6709;&#x76D2;&#x5B50;&#xFF0C;&#x6709;&#x5167;&#x5BB9;&#x7269;&#xFF0C;&#x5C31;&#x9084;&#x6709;&#x4E00;&#x7A2E;&#x53EF;&#x80FD;&#xFF1A;&#x76D2;&#x5B50;&#x6C92;&#x6709;&#x5167;&#x5BB9;&#x7269;&#x3002;</p>
+<p><a href="#tag_1"> </a></p>
+<h3 id="&#x5BA3;&#x544A;&#x7684;&#x90E8;&#x5206;">&#x5BA3;&#x544A;&#x7684;&#x90E8;&#x5206;</h3>
+<p>Optional &#x5B8C;&#x6574;&#x7684;&#x5BA3;&#x544A;&#x662F;&#x9577;&#x9019;&#x6A23;</p>
+<pre><code class="lang-swift"> <span class="hljs-keyword">let</span> maybeNil: <span class="hljs-type">Optional</span>&lt;<span class="hljs-type">Type</span>&gt;
+</code></pre>
+<p>&#x6709;&#x9EDE;&#x5197;&#x9577;&#xFF0C;&#x6240;&#x4EE5; swift &#x5F88;&#x8CBC;&#x5FC3;&#x7684;&#x63D0;&#x4F9B;&#x8A9E;&#x6CD5;&#x7CD6; <code>?</code>&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x5728;<code>&#x578B;&#x5225;&#x7684;&#x5F8C;&#x9762;</code>&#x52A0;&#x4E0A; <code>?</code> &#x3002;</p>
 <p>&#x503C;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5247;&#x662F;&#x4F7F;&#x7528; <code>nil</code> &#x8868;&#x793A;&#x3002;</p>
-<p>&#x770B;&#x8D77;&#x4F86;&#x6703;&#x50CF;&#x9019;&#x6A23;</p>
 <pre><code class="lang-swift"><span class="hljs-keyword">let</span> intMaybeNil: <span class="hljs-type">Int</span>? = <span class="hljs-literal">nil</span>
 
 <span class="hljs-comment">// &#x5C0D;&#x7167;&#x4E00;&#x822C;&#x60C5;&#x6CC1;</span>
-<span class="hljs-keyword">let</span> intAbsValue: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+<span class="hljs-keyword">let</span> intAbsValue: <span class="hljs-type">Int</span> = <span class="hljs-number">100</span>
+
+<span class="hljs-comment">// &#x7576;&#x7136; optinoal &#x662F;&#x8868;&#x793A; `&#x6709;&#x53EF;&#x80FD;` &#x6C92;&#x6709;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x9019;&#x6A23;&#x5BA3;&#x544A;</span>
+<span class="hljs-keyword">let</span> intMaybeNil2: <span class="hljs-type">Int</span>? = <span class="hljs-number">100</span>
 </code></pre>
+<blockquote>
+<p>Note: Optional &#x5982;&#x679C;&#x5BA3;&#x544A;&#x70BA; let &#x4E26;&#x4E14;&#x4E00;&#x958B;&#x59CB;&#x503C;&#x5C31;&#x8A2D;&#x5B9A;&#x70BA; nil&#xFF0C;&#x90A3;&#x5B83;&#x5C07;&#x6C38;&#x9060;&#x662F; nil &#xFF0C;&#x56E0;&#x70BA; let &#x4E0D;&#x53EF;&#x8B8A;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x5230; optional &#x7684;&#x6642;&#x5019;&#x901A;&#x5E38;&#x6703;&#x5BA3;&#x544A;&#x70BA; var&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5982;&#x679C;&#x6211;&#x5011;&#x518D;&#x5B9A;&#x7FA9;&#x578B;&#x5225;&#x7684;&#x6642;&#x5019;&#x6C92;&#x6709;&#x6307;&#x660E;&#x8B8A;&#x6578;&#x662F; Optional &#xFF0C;&#x90A3;&#x9EBC;&#x5728;&#x672A;&#x4F86;&#x4E0D;&#x7BA1;&#x4F55;&#x6642;&#x4F55;&#x5730;&#xFF0C;&#x9019;&#x500B;&#x8B8A;&#x6578;&#x6C38;&#x9060;&#x4E0D;&#x53EF;&#x80FD;&#x70BA; nil</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> number = <span class="hljs-number">100</span>
+number = <span class="hljs-literal">nil</span> <span class="hljs-comment">// &#x1F6AB; &#x7DE8;&#x8B6F;&#x5668;&#x6703;&#x51FA;&#x73FE;&#x8B66;&#x544A;&#xFF0C;&#x56E0;&#x70BA;&#x6211;&#x5011;&#x4E26;&#x6C92;&#x6709;&#x5BA3;&#x544A; number &#x53EF;&#x80FD;&#x70BA; nil</span>
+
+<span class="hljs-keyword">var</span> number: <span class="hljs-type">Int</span>? = <span class="hljs-number">100</span>
+number = <span class="hljs-literal">nil</span> <span class="hljs-comment">// &#x2705; &#x5408;&#x6CD5;&#x7684;&#x5BA3;&#x544A;&#x8207;&#x4F7F;&#x7528;</span>
+</code></pre>
+<ul>
+<li>&#x90A3;&#x4EC0;&#x9EBC;&#x6642;&#x5019;&#x6703;&#x51FA;&#x73FE; nil &#x5462;&#xFF1F;&#x1F330;</li>
+</ul>
+<pre><code class="lang-Swift"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">var</span> number = <span class="hljs-type">Int</span>(str)
+<span class="hljs-built_in">print</span>(number)
+<span class="hljs-comment">// Optional(123)</span>
+
+str = <span class="hljs-string">&quot;&#x4E00;&#x4E8C;&#x4E09;&quot;</span>
+number = <span class="hljs-type">Int</span>(str)
+<span class="hljs-built_in">print</span>(number)
+<span class="hljs-comment">// nil</span>
+
+<span class="hljs-built_in">print</span>(type(of: number))
+<span class="hljs-comment">// Optional&lt;Int&gt;</span>
+</code></pre>
+<p>&#x56E0;&#x70BA;&#x7CFB;&#x7D71;&#x4E0D;&#x77E5;&#x9053;&#x4F60;&#x7684; <code>str</code> &#x4E2D;&#x6703;&#x5B58;&#x653E;&#x7684;&#x662F;&#x4EC0;&#x9EBC;&#xFF0C;&#x5982;&#x679C;&#x662F; <code>&#x4E00;&#x4E8C;&#x4E09;</code> &#x9019;&#x7A2E;&#x5B57;&#x4E32;&#xFF0C;&#x7CFB;&#x7D71;&#x662F;&#x7121;&#x6CD5;&#x81EA;&#x52D5;&#x5E6B;&#x5FD9;&#x8F49;&#x6210; <code>Int</code> &#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x9019;&#x7A2E;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;<code>number</code> &#x7684;&#x578B;&#x5225;&#x6703;&#x662F; <code>Int?</code></p>
+<h3 id="&#x4F7F;&#x7528;&#x7684;&#x90E8;&#x5206;-">&#x4F7F;&#x7528;&#x7684;&#x90E8;&#x5206; <div id="tag_2"></div></h3>
 
                                 
                                 </section>
@@ -243,7 +310,7 @@
                 </a>
                 
                 
-                <a href="../flow_control/if_else.html" class="navigation navigation-next " aria-label="Next page: 條件式 if-else">
+                <a href="../flow_control/flow_control_introduction.html" class="navigation navigation-next " aria-label="Next page: 流程控制">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -254,7 +321,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Optional - 可選型別","level":"2.1","depth":1,"next":{"title":"條件式 if-else","level":"3.1","depth":1,"path":"flow_control/if_else","ref":"flow_control/if_else","articles":[]},"previous":{"title":"Swift 轉職教戰手冊","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"type_introduction/optional.md","mtime":"2019-09-01T08:32:30.990Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-01T09:15:14.871Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Optional - 可選型別","level":"2.1","depth":1,"next":{"title":"流程控制","level":"2.2","depth":1,"path":"flow_control/flow_control_introduction.md","ref":"flow_control/flow_control_introduction.md","articles":[{"title":"條件式控制 if-else","level":"2.2.1","depth":2,"path":"flow_control/if_else.md","ref":"flow_control/if_else.md","articles":[]},{"title":"循環式控制 for-in","level":"2.2.2","depth":2,"path":"flow_control/for_in.md","ref":"flow_control/for_in.md","articles":[]}]},"previous":{"title":"Swift 轉職教戰手冊","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*","description":"transfer to swift developer book!"},"file":{"path":"type_introduction/optional.md","mtime":"2019-09-01T10:04:55.419Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-01T10:46:40.369Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -262,10 +329,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
