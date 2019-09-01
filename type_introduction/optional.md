@@ -1,71 +1,105 @@
 # Optional - 可選型別
 
-* [宣告的部分](宣告的部分)
-* [使用的部分](#tag_2)
-
 在之前的課程有說明過，所謂的變數，其實就像是一個盒子；值，就是盒子的內容物。
 
 那既然有盒子，有內容物，就還有一種可能：盒子沒有內容物。
 
-<a href="#tag_1"> 
+---
 
 ### 宣告的部分
 
-Optional 完整的宣告是長這樣
+* 基本宣告
 
- ```swift
- let maybeNil: Optional<Type>
- ```
+    Optional 完整的宣告是長這樣
 
-有點冗長，所以 swift 很貼心的提供語法糖 `?`，使用方法是在`型別的後面`加上 `?` 。
+    ```swift
+    let maybeNil: Optional<Type>
+    ```
 
-值的部分，則是使用 `nil` 表示。
+    有點冗長，所以 swift 很貼心的提供語法糖 `?`，使用方法是在`型別的後面`加上 `?` 。
 
-```swift
-let intMaybeNil: Int? = nil
+    值的部分，則是使用 `nil` 表示。
 
-// 對照一般情況
-let intAbsValue: Int = 100
+    ```swift
+    let intMaybeNil: Int? = nil
 
-// 當然 optinoal 是表示 `有可能` 沒有值，所以你也可以這樣宣告
-let intMaybeNil2: Int? = 100
-```
+    // 對照一般情況
+    let intAbsValue: Int = 100
 
-> Note: Optional 如果宣告為 let 並且一開始值就設定為 nil，那它將永遠是 nil ，因為 let 不可變。
->
-> 所以使用到 optional 的時候通常會宣告為 var。
+    // 當然 optinoal 是表示 `有可能` 沒有值，所以你也可以這樣宣告
+    let intMaybeNil2: Int? = 100
+    ```
 
+    > Note: Optional 如果宣告為 let 並且一開始值就設定為 nil，那它將永遠是 nil ，因為 let 不可變。
+    >
+    > 所以使用到 optional 的時候通常會宣告為 var。
 
+* 隱式宣告（提前解析）
 
-* 如果我們再定義型別的時候沒有指明變數是 Optional ，那麼在未來不管何時何地，這個變數永遠不可能為 nil
+    有一種情況是，我們確定變數會有值，但一開始我們不確定初始值是什麼，或者物件 init 的成本過大，我們不希望在一開始就給予值。
+    但是可以確定在使用的時候，一定會有值。那們我們在宣告的時候可以再行別的後面加上 `!`
 
-```swift
-var number = 100
-number = nil // 🚫 編譯器會出現警告，因為我們並沒有宣告 number 可能為 nil
+    ```Swift
+    var number: Int!
+    number = 0
+    ```
+    > 對初學者而錢這不是一個太好的用法，除非你掌握了這個用法特性。
 
-var number: Int? = 100
-number = nil // ✅ 合法的宣告與使用
-```
+* 一些 🌰
 
-* 那什麼時候會出現 nil 呢？🌰
+    如果我們在定義型別的時候沒有指明變數是 Optional ，那麼在未來不管何時何地，這個變數永遠不可能為 nil
 
-```Swift
-var str = "123"
-var number = Int(str)
-print(number)
-// Optional(123)
+    ```swift
+    var number = 100
+    number = nil // 🚫 編譯器會出現警告，因為我們並沒有宣告 number 可能為 nil
 
-str = "一二三"
-number = Int(str)
-print(number)
-// nil
+    var number: Int? = 100
+    number = nil // ✅ 合法的宣告與使用
+    ```
+    <br > 
 
-print(type(of: number))
-// Optional<Int>
-```
+    那什麼時候會出現 nil 呢？
 
-因為系統不知道你的 `str` 中會存放的是什麼，如果是 `一二三` 這種字串，系統是無法自動幫忙轉成 `Int` 的，所以在這種情況下，`number` 的型別會是 `Int?`
+    ```Swift
+    var str = "123"
+    var number = Int(str)
+    print(number)
+    // Optional(123)
 
+    str = "一二三"
+    number = Int(str)
+    print(number)
+    // nil
 
+    print(type(of: number))
+    // Optional<Int>
+    ```
 
-### 使用的部分 <div id ="tag_2"></div>
+    因為系統不知道你的 `str` 中會存放的是什麼，如果是 `一二三` 這種字串，系統是無法自動幫忙轉成 `Int` 的，所以在這種情況下，`number` 的型別會是 `Int?`
+
+---
+### 使用的部分
+
+* 強制解析
+
+    假設你確定一個 Optional 變數一定有值，可以在這個變數後面加上一個驚嘆號`!`，表示這個可選型別有值，稱為強制解析(forced unwrapping):
+    ```siwft
+    // 宣告變數 number 為 Int?
+    var number: Int? = 100
+
+    在使用的時候強制解析
+    print(number!) // ✅
+
+    // 將 number 設置為 nil
+    number = nil
+
+    // 下面這行編譯器不會報錯，但在執行期間則會出現錯誤
+    print(number4!) // 🚫
+    ```
+    這是一種很偷懶、且不好的做法，通常不建議初學者這麼使用，但是當你對程式越來越了解與熟悉之後，某些情況下是可以使用 `!` 來做強制解析的
+
+* 可選鏈式解析
+
+    ```swift
+    let name: String
+    ```
