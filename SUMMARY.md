@@ -11,6 +11,6 @@
     * [Optional - 可選型別](type_introduction/optional.md)
 * [函數 func](flow_control/func.md)
 * [流程控制](flow_control/flow_control_introduction.md)
-    * [條件式控制 if-else](flow_control/if_else.md)
+    * [條件式控制 if-else](flow_control/ifelse_switch.md)
     * [循環式控制 for-in](flow_control/for_in.md)
 
